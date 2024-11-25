@@ -1,19 +1,36 @@
-# 🎈 Blank app template
+# Bee and Wax Moth Classification using TensorFlow
 
-A simple Streamlit app template for you to modify!
+## Project Overview
+This project involves building a machine learning model using TensorFlow to classify images of bees and wax moths. The model utilizes a pre-trained MobileNetV2 model with custom layers added on top for the classification task. The goal is to detect and classify images based on two categories: Bees and Wax Moths, which can be useful in bee colony management systems.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Dataset
+The dataset used in this project consists of images of bees and wax moths, which are stored in a directory structure where each class is in its respective folder. The dataset is split into training and validation sets using an 80-20 split, with 20% of the data used for validation.
 
-### How to run it on your own machine
+## Prerequisites
+To run this project, you need the following libraries:
 
-1. Install the requirements
+- TensorFlow
+- NumPy
+- Matplotlib
+- OpenCV
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+You can install the required libraries by running the following command:
 
-2. Run the app
+```bash
+pip install -r requirements.txt
+tensorflow
+numpy
+matplotlib
+opencv-python
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+from google.colab import drive
+drive.mount('/content/drive')
+
+/content/drive/MyDrive/dataset
+
+history = model.fit(train_dataset, validation_data=val_dataset, epochs=10)
+
+model.save('my_model.keras')
+
+loaded_model = tf.keras.models.load_model('my_model.keras')
+
